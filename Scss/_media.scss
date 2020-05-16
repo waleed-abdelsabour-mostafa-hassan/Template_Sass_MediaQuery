@@ -1,0 +1,45 @@
+
+
+@include Sm{
+    header{
+        .w_f{
+            float: none;
+            width: 100%;
+        }
+        position: static;
+        text-align: center;
+        ul{
+            display: block;
+        }
+    }
+    .h2{
+font-size: 1.5rem;
+    }
+    .service{
+        .service_parent{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    .images{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    
+
+}
+
+@include Xs{
+    .service{
+        .service_parent{
+            grid-template-columns:1fr;
+        }
+    }
+    .images{
+        grid-template-columns: 1fr;
+    }
+}
+
+@include Md{
+    .images{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}

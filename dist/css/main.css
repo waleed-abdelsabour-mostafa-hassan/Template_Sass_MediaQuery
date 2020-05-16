@@ -1,0 +1,220 @@
+.w_f, header .logo, header ul {
+  width: 50%;
+  float: left; }
+
+.h2, .home .home_content h2, .need h2, .service h2, .download h2, .getInTouch h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-transform: uppercase; }
+
+.span, .home .home_content span, .need span, .service span, .getInTouch > span {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #f05f40;
+  margin: 1rem auto; }
+
+.p, .home .home_content p, .need p, .getInTouch p {
+  margin: 1.5rem 0;
+  color: #c9c5bd;
+  letter-spacing: 2px;
+  line-height: 1.5; }
+
+.button-p, .home .home_content button {
+  background-color: #f05f40;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  outline: 0;
+  border: 0;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out; }
+  .button-p:hover, .home .home_content button:hover {
+    background-color: #fff;
+    color: #f05f40; }
+
+.button-s, .need button, .download button {
+  background-color: #fff;
+  color: #191b1d;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  outline: 0;
+  border: 0;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out; }
+  .button-s:hover, .need button:hover, .download button:hover {
+    background-color: #191b1d;
+    color: #fff;
+    border: 1px solid #fff; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: Merriweather,Arial, Helvetica, sans-serif; }
+
+.container {
+  width: 85%;
+  margin: auto; }
+
+/* -----------------------  header section  ---------------- */
+header {
+  background: #191b1d;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999; }
+  header .logo h2 {
+    color: #c9c5bd;
+    padding: 10px 0;
+    text-transform: uppercase; }
+  header ul {
+    display: flex;
+    list-style: none;
+    padding: 10px 0; }
+    header ul li {
+      padding: 10px 15px; }
+      header ul li a {
+        color: #c9c5bd;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all 0.5s ease-in-out; }
+        header ul li a:hover {
+          color: #f05f40; }
+
+/* -----------------------  Home section  ---------------- */
+.home {
+  background: url("../img/header.jpg");
+  height: 100vh;
+  background-size: cover;
+  text-align: center;
+  position: relative; }
+  .home .home_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+/* -----------------------  Need section  ---------------- */
+.need {
+  padding: 5rem 0;
+  background: #f05f40;
+  text-align: center; }
+  .need h2 {
+    text-transform: none; }
+  .need span {
+    background: #fff; }
+  .need p {
+    letter-spacing: 0rem; }
+
+/* ----------------service section -----------------------*/
+.service {
+  padding: 5rem 0;
+  text-align: center; }
+  .service h2 {
+    color: #191b1d;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 1.5rem; }
+  .service .service_parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    margin: 2rem 0; }
+    .service .service_parent i {
+      color: #f05f40; }
+    .service .service_parent h3 {
+      color: #333;
+      margin: 1rem 0; }
+    .service .service_parent p {
+      color: #a4a4a4; }
+
+/* -------------------- images section --------------------*/
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 0; }
+  .images > div {
+    position: relative; }
+    .images > div img {
+      width: 100%; }
+    .images > div::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(240, 95, 64, 0.6);
+      opacity: 0;
+      transition: all 0.5s ease-in-out; }
+    .images > div:hover::after {
+      opacity: 1; }
+
+/* ------------------------- Download Section -----------------*/
+.download {
+  background: #191b1d;
+  text-align: center;
+  padding: 5rem 0; }
+  .download h2 {
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 1.5rem; }
+  .download button {
+    margin: 1rem 0; }
+
+/*---------------------- GetIntouch Section --------------------*/
+.getInTouch {
+  text-align: center;
+  padding: 5rem 0; }
+  .getInTouch h2 {
+    color: #191b1d;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 1.5rem; }
+  .getInTouch p {
+    color: #191b1d; }
+  .getInTouch .touch {
+    display: flex;
+    justify-content: center; }
+    .getInTouch .touch .item {
+      margin: 1rem 1rem; }
+      .getInTouch .touch .item i {
+        display: block;
+        margin-bottom: 1rem; }
+      .getInTouch .touch .item:last-child span {
+        color: #f05f40; }
+
+@media (max-width: 768px) {
+  header {
+    position: static;
+    text-align: center; }
+    header .w_f, header .logo, header ul {
+      float: none;
+      width: 100%; }
+    header ul {
+      display: block; }
+  .h2, .home .home_content h2, .need h2, .service h2, .download h2, .getInTouch h2 {
+    font-size: 1.5rem; }
+  .service .service_parent {
+    grid-template-columns: repeat(2, 1fr); }
+  .images {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 575px) {
+  .service .service_parent {
+    grid-template-columns: 1fr; }
+  .images {
+    grid-template-columns: 1fr; } }
+
+@media (min-width: 769px) and (max-width: 1170px) {
+  .images {
+    grid-template-columns: repeat(2, 1fr); } }

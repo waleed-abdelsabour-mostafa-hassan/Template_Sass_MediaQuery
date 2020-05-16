@@ -1,0 +1,13 @@
+1- (node) ======> download nodejs and setup it 
+then write [ node -v ] in terminal to check.
+
+2- Initialization for node =====>write [ npm init ] in terminal .
+
+3-sass =========> write [ npm i node-sass] in terminal .
+
+4-compile sass to css ====> in file package.json write 
+[ "sass" : "node-sass -w Scss/ -o dist/css/  --recursive"]
+ in "scripts":{ }
+Scss(folder can be changed)
+dist (folder can be changed)
+ 5- npm run sass
